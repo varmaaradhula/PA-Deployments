@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: mypreeshaayansh
-          image: varmaaradhula/preeaya:0
+          image: varmaaradhula/preeaya:6
           ports:
-            - containerPort: 80
+            - containerPort: 86
 ---
 apiVersion: v1
 kind: Service
@@ -27,6 +27,6 @@ spec:
     app: my-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 86
+      targetPort: 86
   type: ClusterIP

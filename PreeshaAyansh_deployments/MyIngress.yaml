@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: 
+    - host: preeshaayanshtech.co.uk 
       http:
         paths:
           - path: /

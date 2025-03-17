@@ -13,8 +13,8 @@ spec:
         app: my-app
     spec:
       containers:
-        - name: nginx
-          image: nginx
+        - name: mypreeshaayansh
+          image: varmaaradhula/preeaya:0
           ports:
             - containerPort: 80
 ---

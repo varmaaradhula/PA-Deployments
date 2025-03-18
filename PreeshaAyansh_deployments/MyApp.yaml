@@ -17,6 +17,22 @@ spec:
           image: varmaaradhula/preeaya:7
           ports:
             - containerPort: 80
+          livenessProbe:  # ✅ Liveness probe checks if the app is still running
+            httpGet:
+              path: /health  # Ensure your app serves a /health endpoint
+              port: 80
+            initialDelaySeconds: 5  # Wait 5s before first check
+            periodSeconds: 10  # Check every 10s
+            failureThreshold: 3  # Restart the container if it fails 3 times
+
+          readinessProbe:  # ✅ Readiness probe checks if the app is ready to serve traffic
+            httpGet:
+              path: /health  # Ensure your app serves a /health endpoint
+              port: 80
+            initialDelaySeconds: 8  # Start checking after 2s
+            periodSeconds: 5  # Check every 5s
+            failureThreshold: 3  # Remove from service if it fails 3 times
+
 ---
 apiVersion: v1
 kind: Service

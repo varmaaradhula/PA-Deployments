@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mypreeshaayansh
-          image: varmaaradhula/preeaya:7
+          image: varmaaradhula/preeaya:8
           ports:
             - containerPort: 80
           livenessProbe:  # ✅ Liveness probe checks if the app is still running

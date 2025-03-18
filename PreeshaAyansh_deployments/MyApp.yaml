@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mypreeshaayansh
-          image: varmaaradhula/preeaya:6
+          image: varmaaradhula/preeaya:7
           ports:
             - containerPort: 80
 ---

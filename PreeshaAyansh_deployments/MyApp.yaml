@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mypreeshaayansh
-          image: varmaaradhula/preeaya:11
+          image: varmaaradhula/preeaya:12
           ports:
             - containerPort: 80
           livenessProbe:  # ✅ Liveness probe checks if the app is still running
@@ -22,14 +22,14 @@ spec:
               path: /health  # Ensure your app serves a /health endpoint
               port: 80
             initialDelaySeconds: 5  # Wait 5s before first check
-            periodSeconds: 11  # Check every 11s
+            periodSeconds: 12  # Check every 12s
             failureThreshold: 3  # Restart the container if it fails 3 times
 
           readinessProbe:  # ✅ Readiness probe checks if the app is ready to serve traffic
             httpGet:
               path: /health  # Ensure your app serves a /health endpoint
               port: 80
-            initialDelaySeconds: 11  # Start checking after 2s
+            initialDelaySeconds: 12  # Start checking after 2s
             periodSeconds: 5  # Check every 5s
             failureThreshold: 3  # Remove from service if it fails 3 times
 
